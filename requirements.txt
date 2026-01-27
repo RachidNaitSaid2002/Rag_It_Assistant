@@ -1,0 +1,6 @@
+langchain_community
+FastAPI
+SQLAlchemy
+Scikit-Learn
+Pydantic
+Mlflow
