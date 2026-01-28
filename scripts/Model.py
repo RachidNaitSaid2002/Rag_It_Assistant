@@ -4,15 +4,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 def Get_Model():
-    Model = ChatGoogleGenerativeAI(
-        model="gemini-3-flash-preview",
-        temperateur=0
+    model = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        temperature=0
     )
-    return Model
+    return model
 
 if __name__ == "__main__":
-    Model = Get_Model()
-    print(Model)
+    model = Get_Model()
+    print(model)
+    print(model.invoke('Say Dima Wydad').content)
