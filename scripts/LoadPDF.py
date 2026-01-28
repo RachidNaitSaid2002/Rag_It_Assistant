@@ -1,4 +1,4 @@
-from langchain_community.document_loaders import PyPDFLoader
+from langchain.document_loaders import PyPDFLoader
 import pprint
 
 # Load Pdf
@@ -20,6 +20,6 @@ def LoadPdf(pdf_path : str):
     #     print("-" * 20)
     return pages
 
-
-pages = LoadPdf("./Data/Data.pdf")
+if __name__ == "__main__":
+    pages = LoadPdf("./Data/Data.pdf")
 

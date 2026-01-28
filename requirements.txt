@@ -4,3 +4,10 @@ SQLAlchemy
 Scikit-Learn
 Pydantic
 Mlflow
+huggingface_hub
+langchain==0.0.353
+dotenv
+faiss-cpu
+torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers
+chromadb
