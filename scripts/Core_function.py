@@ -1,14 +1,21 @@
-from RetrievalQA import Retrieval_QA
+from scripts.RetrievalQA import Retrieval_QA
+import time
 
+
+qa = Retrieval_QA()
 def Final_function(Question):
-    qa = Retrieval_QA()
+    t0 = time.time()
     generated_text = qa(Question)
-    return generated_text
+    t1 = time.time()
+    latency = t1 - t0
+    return generated_text, latency
 
 
 if __name__ == "__main__":
-    question = 'What does Mike Halsey recommend as the best IT support tool released in 2019?'
-    Rsponse = Final_function(question)
+    question = 'Dell ?'
+    Rsponse, latency = Final_function(question)
+    print("Latency","="*170)
+    print(latency)
     print("Query","="*170)
     print(Rsponse['query'])
     print("Result","="*170)
