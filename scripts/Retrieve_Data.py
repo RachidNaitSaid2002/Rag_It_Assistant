@@ -1,6 +1,9 @@
-from langchain.embeddings import HuggingFaceEmbeddings
+#from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
+#from langchain_chroma import Chroma
 
-from langchain.vectorstores import Chroma
 
 def Get_Retriever():
     # Objet d'embedding
@@ -21,7 +24,11 @@ def Get_Retriever():
         search_type="similarity",
         search_kwargs={"k":5}
     )
-    return retriever
+    if retriever:
+        print("Retriever created successfully")
+        return retriever
+    else:
+        print("Retriever not created successfully")
 
 if  __name__ == "__main__":
     retrierver = Get_Retriever()
