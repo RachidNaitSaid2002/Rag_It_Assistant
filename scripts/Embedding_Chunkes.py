@@ -1,8 +1,11 @@
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
+#from langchain.embeddings import HuggingFaceEmbeddings
+#from langchain_community.embeddings import HuggingFaceEmbeddings
+#from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 
-from LoadPDF import LoadPdf
-from Chunking import Chunking_Text 
+from scripts.LoadPDF import LoadPdf
+from scripts.Chunking import Chunking_Text 
 
 def Save_chromadb(Chunks):
     try:
@@ -17,7 +20,7 @@ def Save_chromadb(Chunks):
         )
 
         vectorstore = Chroma.from_documents(
-            documents=chunks,
+            documents=Chunks,
             embedding=embeddings,
             persist_directory="chroma_index",
         )

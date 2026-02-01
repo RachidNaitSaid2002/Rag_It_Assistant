@@ -1,5 +1,4 @@
-from langchain.document_loaders import PyPDFLoader
-import pprint
+from langchain_community.document_loaders import PyPDFLoader
 
 # Load Pdf
 def LoadPdf(pdf_path : str):
@@ -18,7 +17,11 @@ def LoadPdf(pdf_path : str):
     #     print(f"Metadata:")
     #     pprint.pprint(page.metadata)
     #     print("-" * 20)
-    return pages
+    if pages:
+        print("Pdf loaded successfully")
+        return pages
+    else:
+        print("Pdf not loaded successfully")
 
 if __name__ == "__main__":
     pages = LoadPdf("./Data/Data.pdf")
