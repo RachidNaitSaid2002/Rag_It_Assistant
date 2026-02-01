@@ -1,13 +1,48 @@
-langchain_community
-FastAPI
-SQLAlchemy
-Scikit-Learn
-Pydantic
-Mlflow
-huggingface_hub
-langchain==0.0.353
-dotenv
-faiss-cpu
-torch --index-url https://download.pytorch.org/whl/cpu
-sentence-transformers
-chromadb
+# =========================
+# Core backend
+# =========================
+fastapi==0.110.0
+uvicorn[standard]==0.27.1
+
+# =========================
+# Database
+# =========================
+SQLAlchemy==2.0.27
+psycopg2-binary==2.9.9
+
+# =========================
+# LangChain (PINNED – DO NOT MIX VERSIONS)
+# =========================
+langchain==0.2.16
+langchain-core==0.2.38
+langchain-community==0.2.16
+langchain-google-genai==1.0.8
+langchain-huggingface==0.0.3
+
+# =========================
+# Vector Databases
+# =========================
+chromadb==0.4.24
+
+# =========================
+# ML / NLP
+# =========================
+torch>=2.1.0
+transformers>=4.39.0
+sentence-transformers==2.6.1
+scikit-learn==1.4.0
+huggingface-hub>=0.23.0
+
+# =========================
+# Experiment tracking
+# =========================
+mlflow==2.10.2
+
+# =========================
+# Utilities
+# =========================
+python-dotenv==1.0.1
+pydantic==2.6.1
+pydantic_settings
+python-jose
+pypdf

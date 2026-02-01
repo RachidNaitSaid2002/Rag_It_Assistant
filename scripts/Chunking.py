@@ -1,5 +1,5 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from LoadPDF import LoadPdf
+from scripts.LoadPDF import LoadPdf
 
 def Chunking_Text(pages):
     text_splitter = RecursiveCharacterTextSplitter(
@@ -9,7 +9,11 @@ def Chunking_Text(pages):
     )
 
     chunks = text_splitter.split_documents(pages)
-    return chunks
+    if chunks:
+        print("Chunks created successfully")
+        return chunks
+    else:
+        print("Chunks not created successfully")
 
 if __name__ == "__main__":
     pages = LoadPdf("./Data/Data.pdf")
