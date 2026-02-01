@@ -1,8 +1,9 @@
-from langchain.chains import RetrievalQA
+#from langchain.chains import RetrievalQA
+from langchain.chains.retrieval_qa.base import RetrievalQA
 
-from Model import Get_Model
-from Retrieve_Data import Get_Retriever
-from Pre_Prompt import Get_Prompt
+from scripts.Model import Get_Model
+from scripts.Retrieve_Data import Get_Retriever
+from scripts.Pre_Prompt import Get_Prompt
 
 def Retrieval_QA():
     llm = Get_Model()
@@ -15,7 +16,11 @@ def Retrieval_QA():
         chain_type_kwargs={'prompt':prompt},
         return_source_documents=True
     )
-    return chain_qa
+    if chain_qa:
+        print("RetrievalQA created successfully")
+        return chain_qa
+    else:
+        print("RetrievalQA not created successfully")
 
 if __name__ == "__main__":
     qa = Retrieval_QA()
