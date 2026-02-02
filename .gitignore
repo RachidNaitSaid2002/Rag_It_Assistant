@@ -4,3 +4,4 @@ __pycache__/
 .env
 .venv/
 app/__unit__.py
+mlruns/
