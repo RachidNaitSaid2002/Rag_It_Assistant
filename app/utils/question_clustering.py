@@ -1,5 +1,5 @@
-from labe_name import Get_Name
-from embedding_function import get_embedding
+from app.utils.labe_name import Get_Name
+from app.utils.embedding_function import get_embedding
 import joblib
 
 def Get_Cluster(question):
@@ -7,7 +7,7 @@ def Get_Cluster(question):
     embedding = get_embedding(question)
     prediction = model.predict([embedding])
     cluster_id = Get_Name(prediction[0])
-    return cluster_id
+    return prediction[0]
 
 if __name__ == "__main__":
     print(Get_Cluster("Qui est Lionel Messi ?"))
