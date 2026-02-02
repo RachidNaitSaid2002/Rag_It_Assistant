@@ -12,6 +12,7 @@ router = APIRouter(prefix="/query", tags=["Query"])
 def create_query(question: str, db: Session = Depends(get_db_session), user_id: int = Depends(get_current_user)):
     result, latency = Final_function(question)
     
+    
     formatted_sources = []
     not_found_msg = "Je ne trouve pas l'information dans le contexte fourni."
     

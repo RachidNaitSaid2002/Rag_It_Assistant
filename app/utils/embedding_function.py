@@ -7,10 +7,11 @@ embeddings = HuggingFaceEmbeddings(
     model_kwargs={"device": "cpu"},
     encode_kwargs={"normalize_embeddings": True},
 )
-def embedding_function(Question):
+
+def get_embedding(Question):
     Vector = embeddings.embed_query(Question)
     return Vector
 
 if __name__ == "__main__":
-    print(embedding_function("Hello"))
+    print(get_embedding("Hello"))
 
