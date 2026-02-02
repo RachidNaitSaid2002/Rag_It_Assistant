@@ -1,0 +1,42 @@
+[
+  {
+    "content": "you work for a large IT provider, as I did with Fujitsu Siemens, the amount of available \ndata will be pretty large.\nThis information will include the asset tag and serial number for each individual \npiece of hardware, from keyboards to servers, records of every call received, by whom, \nwhat about, and how it was resolved. Who it is in your organization that dealt with issues \nbrought to you by clients, and more besides.",
+    "metadata": {
+      "page": 51,
+      "source": "./Data/Data.pdf"
+    },
+    "score": 0.8408743143081665
+  },
+  {
+    "content": "you work for a large IT provider, as I did with Fujitsu Siemens, the amount of available \ndata will be pretty large.\nThis information will include the asset tag and serial number for each individual \npiece of hardware, from keyboards to servers, records of every call received, by whom, \nwhat about, and how it was resolved. Who it is in your organization that dealt with issues \nbrought to you by clients, and more besides.",
+    "metadata": {
+      "page": 51,
+      "source": "./Data/Data.pdf"
+    },
+    "score": 0.8408743143081665
+  },
+  {
+    "content": "133\n\u00a9 Mike Halsey 2019 \nM. Halsey, The IT Support Handbook, https://doi.org/10.1007/978-1-4842-5133-1_14\nCHAPTER 14\nHarnessing System \nand\u00a0Error Reporting \nin\u00a0Windows\nMicrosoft Windows is an absolute treasure trove of information and data. There is literally \nnothing that happens on a PC without the event being recorded, and while this might \nsound a little scary from a data-privacy point of view (it\u2019s not as this data is only ever stored",
+    "metadata": {
+      "page": 139,
+      "source": "./Data/Data.pdf"
+    },
+    "score": 0.8520697951316833
+  },
+  {
+    "content": "133\n\u00a9 Mike Halsey 2019 \nM. Halsey, The IT Support Handbook, https://doi.org/10.1007/978-1-4842-5133-1_14\nCHAPTER 14\nHarnessing System \nand\u00a0Error Reporting \nin\u00a0Windows\nMicrosoft Windows is an absolute treasure trove of information and data. There is literally \nnothing that happens on a PC without the event being recorded, and while this might \nsound a little scary from a data-privacy point of view (it\u2019s not as this data is only ever stored",
+    "metadata": {
+      "page": 139,
+      "source": "./Data/Data.pdf"
+    },
+    "score": 0.8520697951316833
+  },
+  {
+    "content": "137\nFigure 14-4. System Information provides a wealth of information about the PC\nIt\u2019s split into three main sections, each with sub-sections within. Hardware resources \nis where you can find technical information about the hardware installed in the PC, as \nwell as details about driver conflicts, IRQs (Interrupt Request Channels to the processor), \ncurrent memory usage, and more.\nComponents contains full details of all the hardware installed in the PC, including",
+    "metadata": {
+      "page": 143,
+      "source": "./Data/Data.pdf"
+    },
+    "score": 0.8599756956100464
+  }
+]

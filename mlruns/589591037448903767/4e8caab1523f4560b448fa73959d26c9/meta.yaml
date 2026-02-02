@@ -1,0 +1,15 @@
+artifact_uri: file:///media/rachid/d70e3dc6-74e7-4c87-96bc-e4c3689c979a/lmobrmij/Projects/Rag_It_Assistant/mlruns/589591037448903767/4e8caab1523f4560b448fa73959d26c9/artifacts
+end_time: 1770059771128
+entry_point_name: ''
+experiment_id: '589591037448903767'
+lifecycle_stage: active
+run_id: 4e8caab1523f4560b448fa73959d26c9
+run_name: Query_1770059748
+run_uuid: 4e8caab1523f4560b448fa73959d26c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1770059749395
+status: 3
+tags: []
+user_id: rachid
