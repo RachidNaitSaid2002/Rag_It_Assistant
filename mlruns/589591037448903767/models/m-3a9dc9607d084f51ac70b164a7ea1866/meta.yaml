@@ -1,0 +1,10 @@
+artifact_location: file:///media/rachid/d70e3dc6-74e7-4c87-96bc-e4c3689c979a/lmobrmij/Projects/Rag_It_Assistant/mlruns/589591037448903767/models/m-3a9dc9607d084f51ac70b164a7ea1866/artifacts
+creation_timestamp: 1770061698176
+experiment_id: '589591037448903767'
+last_updated_timestamp: 1770061718853
+model_id: m-3a9dc9607d084f51ac70b164a7ea1866
+model_type: null
+name: rag_pipeline_pyfunc
+source_run_id: d9bbc61777814fc89fb9a306b04f45e1
+status: 2
+status_message: null
