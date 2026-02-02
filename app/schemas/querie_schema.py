@@ -6,7 +6,7 @@ class QueryBase(BaseModel):
     user_id: int
     question: str
     answer: Optional[str] = None
-    cluster: Optional[int] = 0
+    cluster: Optional[int]
     latency_ms: Optional[float] = None
     formatted_sources: Optional[list] = None
 
