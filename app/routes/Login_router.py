@@ -10,8 +10,7 @@ from app.schemas.users_schema import loginBase
 from app.schemas.token_schema import Token
 
 
-router = APIRouter(prefix="/auth", tags=["Login"])
-
+router = APIRouter(prefix="/auth", tags=["Auth"])
 
 @router.post("/login", response_model=Token)
 def login(request: loginBase, db: Session = Depends(get_db)):
