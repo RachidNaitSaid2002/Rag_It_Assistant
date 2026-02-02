@@ -6,7 +6,7 @@ from app.models.user_model import User
 from app.schemas.users_schema import UserCreate
 
 
-router = APIRouter(prefix="/auth", tags=["Registration"])
+router = APIRouter(prefix="/auth", tags=["Auth"])
 
 
 @router.post("/register")
