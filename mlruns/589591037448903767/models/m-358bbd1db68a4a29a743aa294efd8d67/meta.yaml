@@ -1,0 +1,10 @@
+artifact_location: file:///media/rachid/d70e3dc6-74e7-4c87-96bc-e4c3689c979a/lmobrmij/Projects/Rag_It_Assistant/mlruns/589591037448903767/models/m-358bbd1db68a4a29a743aa294efd8d67/artifacts
+creation_timestamp: 1770061668264
+experiment_id: '589591037448903767'
+last_updated_timestamp: 1770061669803
+model_id: m-358bbd1db68a4a29a743aa294efd8d67
+model_type: null
+name: rag_pipeline_model
+source_run_id: 9558e572094545a2a119051b815f9d9c
+status: 3
+status_message: null

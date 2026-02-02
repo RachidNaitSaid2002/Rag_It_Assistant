@@ -36,7 +36,7 @@ huggingface-hub>=0.23.0
 # =========================
 # Experiment tracking
 # =========================
-mlflow==2.10.2
+mlflow==3.9.0
 
 # =========================
 # Utilities

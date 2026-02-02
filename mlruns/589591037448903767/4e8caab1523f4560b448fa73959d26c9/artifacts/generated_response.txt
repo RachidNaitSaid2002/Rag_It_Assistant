@@ -1,0 +1,8 @@
+Le contenu des données comprend :
+
+*   Le numéro d'inventaire (asset tag) et le numéro de série de chaque pièce de matériel, des claviers aux serveurs.
+*   Les enregistrements de chaque appel reçu, par qui, à quel sujet et comment il a été résolu.
+*   L'identité de la personne au sein de l'organisation qui a traité les problèmes soulevés par les clients.
+*   Toutes les informations et données concernant les événements qui se produisent sur un PC sous Microsoft Windows.
+*   Des informations techniques sur le matériel installé dans le PC, y compris les conflits de pilotes, les IRQ (Interrupt Request Channels), l'utilisation actuelle de la mémoire.
+*   Des détails complets sur tout le matériel installé dans le PC.
