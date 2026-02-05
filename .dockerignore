@@ -1,0 +1,19 @@
+# Docker files
+.env.docker
+Dockerfile
+docker-compose.yml
+
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+
+# Environment files
+.env
+
+# Database
+chroma_index/
+
+# MLflow
+mlruns/
