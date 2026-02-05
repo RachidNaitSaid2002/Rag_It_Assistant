@@ -1,5 +1,5 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from scripts.LoadPDF import LoadPdf
+from LoadPDF import LoadPdf
 
 def Chunking_Text(pages):
     text_splitter = RecursiveCharacterTextSplitter(
