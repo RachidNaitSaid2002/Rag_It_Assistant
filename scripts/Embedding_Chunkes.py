@@ -4,8 +4,8 @@
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from scripts.LoadPDF import LoadPdf
-from scripts.Chunking import Chunking_Text 
+from LoadPDF import LoadPdf
+from Chunking import Chunking_Text 
 
 def Save_chromadb(Chunks):
     try:
