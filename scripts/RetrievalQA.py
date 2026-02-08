@@ -24,6 +24,6 @@ def Retrieval_QA():
 
 if __name__ == "__main__":
     qa = Retrieval_QA()
-    question = "what is messi ?"
+    question = "Can you tell me what is 'system information'?"
     generated_text = qa(question)
     print(generated_text)
