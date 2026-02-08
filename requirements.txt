@@ -23,6 +23,7 @@ langchain-huggingface==0.0.3
 # Vector Databases
 # =========================
 chromadb==0.4.24
+langchain-chroma
 
 # =========================
 # ML / NLP
@@ -31,7 +32,12 @@ torch>=2.1.0
 transformers>=4.39.0
 sentence-transformers==2.6.1
 scikit-learn==1.4.0
-huggingface-hub>=0.23.0
+huggingface-hub>=0.23.0 
+
+# =========================
+# Experiment tracking
+# =========================
+mlflow==3.9.0
 
 # =========================
 # Experiment tracking
@@ -42,6 +48,7 @@ mlflow==3.9.0
 # Utilities
 # =========================
 python-dotenv==1.0.1
+mlflow==3.9.0
 pydantic==2.6.1
 pydantic_settings
 python-jose

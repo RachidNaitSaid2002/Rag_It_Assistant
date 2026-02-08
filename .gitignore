@@ -5,3 +5,5 @@ __pycache__/
 .venv/
 app/__unit__.py
 mlruns/
+chroma_index/
+.env.docker
