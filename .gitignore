@@ -7,5 +7,3 @@ app/__unit__.py
 mlruns/
 chroma_index/
 .env.docker
-.env.docker
-secrets.yaml

@@ -22,7 +22,7 @@ langchain-google-genai==1.0.8
 # Vector Databases
 # =========================
 chromadb==0.4.24
-langchain-chroma==0.1.4
+langchain-chroma
 
 # =========================
 # ML / NLP (CPU SAFE)
@@ -32,7 +32,12 @@ transformers==4.39.3
 tokenizers==0.15.2
 sentence-transformers==2.6.1
 scikit-learn==1.4.0
-huggingface-hub==0.23.0
+huggingface-hub>=0.23.0 
+
+# =========================
+# Experiment tracking
+# =========================
+mlflow==3.9.0
 
 # =========================
 # Experiment tracking
@@ -43,6 +48,7 @@ mlflow==3.9.0
 # Utilities
 # =========================
 python-dotenv==1.0.1
+mlflow==3.9.0
 pydantic==2.6.1
 pydantic-settings
 python-jose
