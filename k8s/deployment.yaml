@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rag-app
+  template:
+    metadata:
+      labels:
+        app: rag-app
+    spec:
+      containers:
+      - name: rag-assistant
+        image: rachid130/rag-it-assistant-app:latest 
+        ports:
+        - containerPort: 8000
+        env:
+        - name: HF_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: HF_TOKEN
+        - name: GOOGLE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: GOOGLE_API_KEY
+        - name: DB_HOST
+          value: rag-postgres
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: POSTGRES_DB
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: POSTGRES_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: POSTGRES_PASSWORD
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: DATABASE_URL
+        - name: SK
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: SECRET_KEY
+        - name: ALG
+          value: "HS256"
+        - name: ACCESS_TOKEN_EXPIRE_MINUTES
+          value: "60"
+        - name: MLFLOW_TRACKING_URI
+          value: "http://rag-mlflow-service:5000"
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "500m"
+          limits:
+            memory: "4Gi"
+            cpu: "2"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rag-app-service
+  namespace: default
+spec:
+  selector:
+    app: rag-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: LoadBalancer # Use NodePort if LoadBalancer isn't available

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-mlflow
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rag-mlflow
+  template:
+    metadata:
+      labels:
+        app: rag-mlflow
+    spec:
+      containers:
+      - name: mlflow
+        image: ghcr.io/mlflow/mlflow:v2.10.2
+        ports:
+        - containerPort: 5000
+        command: ["mlflow", "ui", "--host", "0.0.0.0", "--port", "5000"]
+        volumeMounts:
+        - name: mlruns-storage
+          mountPath: /mlruns
+      volumes:
+      - name: mlruns-storage
+        emptyDir: {} # For production, use a PersistentVolumeClaim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rag-mlflow-service
+  namespace: default
+spec:
+  selector:
+    app: rag-mlflow
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: ClusterIP
