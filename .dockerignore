@@ -17,3 +17,11 @@ chroma_index/
 
 # MLflow
 mlruns/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+mlruns/
+Data/
