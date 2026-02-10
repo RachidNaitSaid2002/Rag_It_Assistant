@@ -8,3 +8,4 @@ mlruns/
 chroma_index/
 .env.docker
 .env.docker
+secrets.yaml
