@@ -23,6 +23,10 @@ RUN ls -la
 # --no-cache-dir keeps the image small
 #RUN pip install --no-cache-dir -r requirements.txt
 # Increase default timeout to 1000 seconds (approx 16 minutes)
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir \
+  --index-url https://download.pytorch.org/whl/cpu \
+  torch==2.1.2+cpu
 RUN pip install --no-cache-dir --default-timeout=1000 -r requirements.txt
 
 # Copy project files

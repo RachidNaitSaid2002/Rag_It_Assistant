@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.db.db_connection import Base, engine
 from app.routes import Login_router, Register_router, Query_router, HealthCheck_router, History_router
 import warnings
+
 warnings.filterwarnings("ignore")
 
 app = FastAPI()

@@ -27,6 +27,7 @@ services:
   app:
     build: .
     container_name: rag_app
+    working_dir: /app  # <--- ADD THIS LINE
     restart: always
     ports:
       - "8000:8000"
