@@ -25,6 +25,8 @@ services:
       - mlruns_data:/mlruns
 
   app:
+    image: rag_it_assistant_img
+    pull_policy: never
     build: .
     container_name: rag_app
     working_dir: /app  # <--- ADD THIS LINE
