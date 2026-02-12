@@ -12,7 +12,7 @@ def Final_function(Question):
 
 
 if __name__ == "__main__":
-    question = 'Dell ?'
+    question = 'dell'
     Rsponse, latency = Final_function(question)
     print("Latency","="*170)
     print(latency)

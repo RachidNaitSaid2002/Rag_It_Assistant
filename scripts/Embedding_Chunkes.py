@@ -4,8 +4,8 @@
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from LoadPDF import LoadPdf
-from Chunking import Chunking_Text 
+from scripts.LoadPDF import LoadPdf
+from scripts.Chunking import Chunking_Text 
 
 def Save_chromadb(Chunks):
     try:
@@ -25,7 +25,6 @@ def Save_chromadb(Chunks):
             persist_directory="chroma_index",
         )
 
-        vectorstore.persist()
         print("Chroma is saved with succes")
     except Exception as e:
         print("we have some error", e)

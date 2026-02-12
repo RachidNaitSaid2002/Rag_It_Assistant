@@ -1,8 +1,5 @@
-#from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-#from langchain_community.vectorstores import Chroma
 from langchain_chroma import Chroma
-#from langchain_chroma import Chroma
 
 
 def Get_Retriever():
@@ -18,8 +15,7 @@ def Get_Retriever():
         persist_directory="./chroma_index",
         embedding_function=embeddings
     )
-
-    # Retriever
+    
     retriever = vectorstore.as_retriever(
         search_type="similarity",
         search_kwargs={"k":5}
